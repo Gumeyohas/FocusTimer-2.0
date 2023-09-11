@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temporizador estilo Pomodoro">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>FocusTimerV3</title>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <script type="module" src="./src/main.js" defer></script>
+</head>
+<body>
+
+    <div class="lightmode">
+        <button id="toggle" data-action="toggleMode" class="ph bold ph-sun"></button>
+    </div>
+
+    <div id="app">
+        <div id="left-side">
+            <section id="timer" class="flex">
+                <span id="minutes">25</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </section>
+    
+            <section id="controls" >
+                <button 
+                data-action="toggleRunning"
+                class="ph ph-play-circle">
+                    <span class="sr-only">Iniciar contador</span>
+                </button>
+                <button 
+                data-action="toggleRunning"
+                class="ph ph-pause-circle">
+                    <span class="sr-only">Pausar contador</span>
+                </button>
+                <button 
+                data-action="reset"
+                class="ph ph-stop-circle">
+                    <span class="sr-only">resetar contador</span>
+                </button>
+                <button 
+                data-action="plus"
+                class="ph ph-plus-circle">
+                    <span class="sr-only">Adicionar mais cinco</span>
+                </button>
+                <button 
+                data-action="minus"
+                class="ph ph-minus-circle ">
+                    <span class="sr-only">Diminuir menos cinco</span>
+                </button>
+            </section>
+        </div>
+
+        <section id="cards">
+            <button 
+            id="forest"
+            data-action="toggleMusicForest" 
+            class="ph ph-tree soundButtons">
+                <span class="sr-only">Som de floresta</span>
+            </button>
+            <button 
+            id="rain"
+            data-action="toggleMusicRain" 
+            class="ph ph-cloud-snow soundButtons">
+                <span class="sr-only">Som de chuva</span>
+            </button>
+            <button 
+            id="wait"
+            data-action="toggleMusicWait" 
+            class="ph ph-storefront soundButtons">
+                <span class="sr-only">Som de espera</span>
+            </button>
+            <button 
+            id="fire"
+            data-action="toggleMusicFire" 
+            class="ph ph-fire soundButtons">
+                <span class="sr-only">Som de lareira</span>
+            </button>
+        </section>
+    </div>
+</body>
+</html>
