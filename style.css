@@ -22,6 +22,7 @@ html.light{
     --controls-bg-color: hsl(46, 68%, 5%);
     --sounds-bg-color-hover:  #405d27;
     --sounds-bg-color-active: hsl(60, 100%, 38%);
+    
 }
 
 .sr-only {
@@ -35,7 +36,6 @@ html.light{
     appearance: none;
 }
 
-
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -43,33 +43,18 @@ body {
     display: grid;
     height: 100vh;
     place-content: center;
+    transition: background .4s;
 }
-
-#app {
-    width: 821px;
-    height: 336px;
-    margin: auto;
-    display: inline-flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
 
 .flex {
     display: flex;
-}
-
-#timer {
-    font-size: 126px;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
 }
 
 .lightmode {
     position: absolute;
     top: 0;
     right: 0;
-
+    
     padding: 3.2rem;
 }
 
@@ -81,15 +66,45 @@ body {
     
     padding: 2.4rem;
     cursor: pointer;
-
+    
     color: var(--text-color);
-
+    
     transition: .4s;
+}
+
+.lightmode button:hover {
+    transform: scale(1.2);
+    
+}
+
+#app {
+    width: 82rem;
+    height: 33rem;
+    margin: auto;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#timer {
+    font-size: 12.6rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 
 #controls {
     display: flex;
     justify-content: space-around;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: 13.8rem 13.8rem;
+    gap: 3.2rem;
+}
+
+#cards button {
+    size: 5rem;
 }
 
 .ph-stop-circle,
@@ -101,7 +116,7 @@ body {
     border: 0;
     color: var(--controls-bg-color);
     cursor: pointer;
-    font-size: 48px; 
+    font-size: 4.8rem; 
     
     transition: .4s;
 }
@@ -119,15 +134,6 @@ html:not(.running) .ph-pause-circle{
     display: none;
 }
 
-#cards {
-    display: grid;
-    grid-template-columns: 138px 138px;
-    gap: 32px;
-}
-
-#cards button {
-    size: 5rem;
-}
 
 .ph-tree,
 .ph-cloud-snow,
@@ -137,7 +143,7 @@ html:not(.running) .ph-pause-circle{
     border-radius: 9999px;
     border: 0;
     cursor: pointer;
-    height: 152px;
+    height: 15.2rem;
 
     transition: background .3s;
     transition: transform .4s;
@@ -163,6 +169,11 @@ html:not(.running) .ph-pause-circle{
 }
 
 
-@media (max-width: 800px) {
-    
+@media (max-width: 860px) {
+    #app {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        width: 100%;
+    }
 }
